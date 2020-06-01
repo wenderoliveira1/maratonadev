@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+}
+
+header,
+main,
+footer {
+  text-align: center;
+}
+
+.logo {
+  width: 10em;
+  margin: 30px 0px 0px 0px;
+  background-color: black;
+}
+
+header p {
+  font-size: 14px;
+}
+
+header button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 45px;
+  align-items: center;
+  background-color: red;
+  padding: 16px 64px;
+  border-radius: 10px;
+}
+
+form input,
+form button {
+  width: 100%;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px white solid;
+}
+
+form input {
+  background-color: transparent;
+}
+
+form input::placeholder {
+  font-weight: bold;
+}
+
+main .doadores {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header,
+.form,
+main {
+  margin: 0 auto 4em auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+header h1,
+main h2 {
+  margin-bottom: 4em;
+}
+
+h1,
+h2 {
+  color: black;
+}
+
+main h2 span {
+  color: red;
+}
+
+.form h2 {
+  text-align: right;
+  color: AliceBlue;
+  font-size: 18px;
+}
+
+.sangue {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.sangue::before {
+  content: "";
+  background-color: #f0bebe;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+}
+
+.doador p {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+
+footer {
+  margin-top: auto;
+  padding: 16px;
+  border: 1px solid black;
+}
+
+/* funcionalidades com javascript */
+section.form {
+  transition: all 420ms;
+}
+
+section.form.hide {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin-top: -70px;
+}

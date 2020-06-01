@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inicial-scale= 1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dev.css">
+  <title>Doe sangue! Doe vida!</title>
+</head>
+
+<body>
+
+  <header>
+    <img class="logo" src="/logo.png" alt="Imagem de DOE">
+    <h2>A sua doação importa</h2>
+    <p>Salve até 3 vidas com 1 doação</p>
+    <p>Mais de 38.000 são necessárias todos os dias</p>
+    <p>Apenas 1,9% da população brasileira doa sangue</p>
+
+    <button>Quero ajudar</button>
+  </header>
+
+  <section class="form hide" >
+    <h2>Entre na lista de doadores</h2>
+    <form action="/" method="post" >
+      <input type="text" name="nome" placeholder="Nome Completo" />
+      <input type="text" name="email" placeholder="Email" />
+      <input type="text" name="sangue" placeholder="Tipo sanguíneo" />
+      <button>Quero ajudar</button>
+    </form>
+  </section>
+  <main>
+    <h2>Últimos <span>doadores</span></h2>
+
+    <section class="doadores">
+
+      {% for doador in doadores %}
+
+      <div class="doador">
+        <div class="sangue"><div style="position: absolute">{{doador.sangue}}</div></div>
+        <p>{{doador.name}}</p>
+      </div>
+
+      {%endfor%}
+      
+    </section>
+  </main>
+  <footer> W.Emanoel</footer>
+  <script src="/dev.js"></script>
+</body>
+
+</html>
